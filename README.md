@@ -14,7 +14,3 @@ Example once your program is running properly:
 
 
 
-### Rules
-
--   This is an individual assignment.
--   Deadline: 3 hours.
