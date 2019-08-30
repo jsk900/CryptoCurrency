@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+/* Defaults */
 * {
   margin: 0;
   padding: 0;
@@ -36,11 +37,13 @@ header h1 {
   color: #3b1a09;
 }
 
+/* Main section */
 section {
   width: 60%;
   height: 80%;
 }
 
+/* Crypto-Currency list start ............................................*/
 #crypto {
   width: 100%;
   height: 30px;
@@ -70,7 +73,9 @@ section {
   color: ghostwhite;
   font-weight: bold;
 }
+/* Crypto-Currency end .................................................. */
 
+/* Currency list start .................................................. */
 #currency {
   width: 100%;
   height: 30px;
@@ -100,7 +105,9 @@ section {
   color: ghostwhite;
   font-weight: bold;
 }
+/* Currency list end ............................................................ */
 
+/* Remove select list drop-down arrows */
 select::-ms-expand {
   display: none;
 }
@@ -109,6 +116,7 @@ select {
   appearance: none;
 }
 
+/* Input styling */
 input {
   width: 100%;
   height: 50px;
@@ -120,6 +128,7 @@ input {
   outline: none;
 }
 
+/* Remove input number arrows */
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -171,4 +180,15 @@ footer p {
   font-size: 1em;
   font-weight: bold;
   padding: 5px 0 5px 10px;
+}
+
+/* Media queries */
+@media (max-width: 991px) and (min-width: 300px) {
+  header h1 {
+    font-size: 1.3em;
+  }
+
+  .results p {
+    font-size: 0.6em;
+  }
 }
