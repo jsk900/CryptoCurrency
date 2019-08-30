@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: visible;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(./money.png);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  height: 5%;
+  margin: 50px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3em;
+  color: #3b1a09;
+}
+
+section {
+  width: 60%;
+  height: 80%;
+}
+
+#crypto {
+  width: 100%;
+  height: 30px;
+  padding: 3px;
+  margin-bottom: 20px;
+  color: #3b1a09;
+  background-color: #f09f25;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-size: 0.7em;
+}
+
+#crypto option:nth-child(odd) {
+  font-size: 0.9em;
+  background-color: #f1c98e;
+}
+
+#crypto option:nth-child(even) {
+  font-size: 0.9em;
+  background-color: #dfb372;
+}
+
+#crypto option:first-child {
+  font-size: 1em;
+  background-color: #3b1a09;
+  color: ghostwhite;
+  font-weight: bold;
+}
+
+#currency {
+  width: 100%;
+  height: 30px;
+  padding: 3px;
+  margin-bottom: 20px;
+  color: #3b1a09;
+  background-color: #f09f25;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-size: 0.7em;
+}
+
+#currency option:nth-child(odd) {
+  font-size: 0.9em;
+  background-color: #f1c98e;
+}
+
+#currency option:nth-child(even) {
+  font-size: 0.9em;
+  background-color: #dfb372;
+}
+
+#currency option:first-child {
+  font-size: 1em;
+  background-color: #3b1a09;
+  color: ghostwhite;
+  font-weight: bold;
+}
+
+select::-ms-expand {
+  display: none;
+}
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  color: ghostwhite;
+  background-color: #704504;
+  font-size: 1.2em;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  color: ghostwhite;
+  background-color: #f09f25;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 3px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  font-size: 1.2em;
+}
+
+.results {
+  width: 100%;
+  height: 50px;
+  background-color: #f09f25;
+  margin-top: 20px;
+}
+
+.results p {
+  color: ghostwhite;
+  font-size: 0.8em;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer {
+  width: 100%;
+  height: 5%;
+  background-color: #f09f25;
+}
+
+footer p {
+  color: ghostwhite;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 0 5px 10px;
+}
