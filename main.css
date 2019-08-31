@@ -156,17 +156,21 @@ button:hover {
 
 .results {
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color: #f09f25;
   margin-top: 20px;
 }
 
 .results p {
   color: ghostwhite;
-  font-size: 0.8em;
+  font-size: 1.3em;
   padding: 10px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.results p span {
+  color: #3b1a09;
 }
 
 footer {

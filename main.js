@@ -117,7 +117,7 @@ const show = data => {
   let currencyName = currNames[currencyIndex];
   let unicode = currencyUnicodes[currencyIndex];
   let conversion = Math.ceil(numberValue * data.ticker.price);
-  results.innerHTML = `You converted ${numberValue} ${cryptoName} to ${currencyName} which equals        <strong>${unicode}${conversion}</strong>`;
+  results.innerHTML = `You converted ${numberValue} ${cryptoName} to ${currencyName} which equals  <span>${unicode}${conversion}</span>`;
 };
 
 //Handle errors
