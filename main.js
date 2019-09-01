@@ -79,7 +79,6 @@ const start = () => {
     option.value = type;
     option.innerHTML = cryptoNames[index];
     cryptoSelect.appendChild(option);
-
     paddingPosCrypto =
       cryptoSelect.scrollWidth / 2 - cryptoSelect[0].innerHTML.length * 2;
     cryptoSelect.style = `padding-left: ${paddingPosCrypto}px;`;
@@ -159,21 +158,18 @@ currencySelect.addEventListener('mouseleave', e => {
 //Select crypto currency
 cryptoSelect.addEventListener('click', e => {
   cryptoValue = e.target.value;
+  console.log(e.target.value.length);
+  paddingPosCrypto = e.target.scrollWidth / 2 - e.target.value.length * 2;
+  e.target.style = `padding-left: ${paddingPosCrypto}px`;
   input.value = '';
   results1.innerHTML = '';
   results2.innerHTML = '';
-  console.log(e.target.scrollWidth);
-  paddingPosCrypto =
-    e.target.scrollWidth / 2 - cryptoSelect[0].innerHTML.length * 2;
-  e.target.style = `padding-left: ${paddingPosCrypto}px`;
 });
 
 //Select currency
 currencySelect.addEventListener('click', e => {
   currencyValue = e.target.value;
-
-  paddingPosCurr =
-    e.target.scrollWidth / 2 - currencySelect[0].innerHTML.length * 2;
+  paddingPosCurr = e.target.scrollWidth / 2 - e.target.value.length * 2;
   e.target.style = `padding-left: ${paddingPosCurr}px`;
 });
 
