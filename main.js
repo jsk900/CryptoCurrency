@@ -156,7 +156,6 @@ cryptoSelect.addEventListener('click', e => {
 //Select currency
 currencySelect.addEventListener('click', e => {
   currencyValue = e.target.value;
-  input.focus();
 });
 
 //Show results
