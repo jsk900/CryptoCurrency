@@ -47,7 +47,8 @@ section {
 #crypto {
   width: 100%;
   height: 30px;
-  padding: 3px;
+  padding: 3px 0;
+  padding-left: 46%;
   margin-bottom: 20px;
   color: #3b1a09;
   background-color: #f09f25;
@@ -79,7 +80,8 @@ section {
 #currency {
   width: 100%;
   height: 30px;
-  padding: 3px;
+  padding: 3px 0;
+  padding-left: 46%;
   margin-bottom: 20px;
   color: #3b1a09;
   background-color: #f09f25;
@@ -126,6 +128,7 @@ input {
   padding: 10px;
   border: none;
   outline: none;
+  text-align: center;
 }
 
 /* Remove input number arrows */
@@ -137,8 +140,8 @@ input[type='number']::-webkit-outer-spin-button {
 
 button {
   width: 100%;
-  height: 30px;
-  color: ghostwhite;
+  height: 50px;
+  color: #3b1a09;
   background-color: #f09f25;
   font-size: 1em;
   font-weight: bold;
@@ -158,7 +161,7 @@ button {
 }
 
 .results1 p {
-  color: ghostwhite;
+  color: #3b1a09;
   font-size: 1.3em;
   padding: 10px;
   text-align: center;
@@ -167,7 +170,7 @@ button {
 
 .results2 {
   width: 100%;
-  height: 30px;
+  height: 50px;
   background-color: #704504;
   margin-top: 20px;
 }
@@ -175,7 +178,7 @@ button {
 .results2 p {
   color: ghostwhite;
   font-size: 1.2em;
-  padding-top: 1px;
+  padding-top: 10px;
   text-align: center;
 }
 
