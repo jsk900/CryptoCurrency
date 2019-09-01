@@ -67,7 +67,6 @@ let cryptoValue, currencyValue, numberValue;
 const cryptoSelect = document.querySelector('#crypto');
 const currencySelect = document.querySelector('#currency');
 const input = document.querySelector('input[type="number"]');
-const convert = document.querySelector('button');
 const results = document.querySelector('.results p');
 
 //Functions
@@ -78,8 +77,6 @@ const start = () => {
     option.value = type;
     option.innerHTML = cryptoNames[index];
     cryptoSelect.appendChild(option);
-    convert.disabled = true;
-    convert.style = 'opacity: 0.5';
   });
 
   currTypes.map((type, index) => {
@@ -151,6 +148,8 @@ currencySelect.addEventListener('mouseleave', e => {
 //Select crypto currency
 cryptoSelect.addEventListener('click', e => {
   cryptoValue = e.target.value;
+  input.value = '';
+  results.innerHTML = '';
 });
 
 //Select currency
@@ -158,16 +157,8 @@ currencySelect.addEventListener('click', e => {
   currencyValue = e.target.value;
 });
 
-//Convert button clicked
-convert.addEventListener('click', () => {
-  numberValue = parseInt(input.value);
-  convert.disabled = true;
-  convert.style = 'opacity: 0.5';
-  dataLoad();
-});
-
-//Show convert button
+//Show results
 input.addEventListener('mouseleave', () => {
-  convert.disabled = false;
-  convert.style = 'opacity: 1';
+  numberValue = parseInt(input.value);
+  dataLoad();
 });
