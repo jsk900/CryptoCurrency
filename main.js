@@ -68,7 +68,8 @@ const cryptoSelect = document.querySelector('#crypto');
 const currencySelect = document.querySelector('#currency');
 const input = document.querySelector('input[type="number"]');
 const convert = document.querySelector('button');
-const results = document.querySelector('.results p');
+const results1 = document.querySelector('.results1 p');
+const results2 = document.querySelector('.results2 p');
 
 //Functions
 //Main start build lists
@@ -115,20 +116,21 @@ const show = data => {
   let currencyName = currNames[currencyIndex];
   let unicode = currencyUnicodes[currencyIndex];
   let conversion = Math.ceil(numberValue * data.ticker.price);
-  results.innerHTML = `You converted ${numberValue} ${cryptoName} to ${currencyName} which equals  <span>${unicode}${conversion}</span>`;
+  results1.innerHTML = `You converted ${numberValue} ${cryptoName} to ${currencyName}`;
+  results2.innerHTML = `${unicode}${conversion}`;
 };
 
 //Handle errors
 const errorHandler = error => {
   if (error != '') {
-    results.innerHTML = `There seems to be a problem <br> ${error}`;
+    results1.innerHTML = `There seems to be a problem <br> ${error}`;
   }
 };
 
 //Listeners
 //Expand list
 cryptoSelect.addEventListener('mouseenter', e => {
-  cryptoSelect.style = 'margin-bottom: 200px';
+  cryptoSelect.style = 'margin-bottom: 175px';
 });
 
 //Collapse list
@@ -138,7 +140,7 @@ cryptoSelect.addEventListener('mouseleave', e => {
 
 //Expand list
 currencySelect.addEventListener('mouseenter', e => {
-  currencySelect.style = 'margin-bottom: 200px';
+  currencySelect.style = 'margin-bottom: 140px';
 });
 
 //Collapse list
@@ -150,7 +152,8 @@ currencySelect.addEventListener('mouseleave', e => {
 cryptoSelect.addEventListener('click', e => {
   cryptoValue = e.target.value;
   input.value = '';
-  results.innerHTML = '';
+  results1.innerHTML = '';
+  results2.innerHTML = '';
 });
 
 //Select currency
