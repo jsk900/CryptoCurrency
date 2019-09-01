@@ -67,6 +67,7 @@ let cryptoValue, currencyValue, numberValue;
 const cryptoSelect = document.querySelector('#crypto');
 const currencySelect = document.querySelector('#currency');
 const input = document.querySelector('input[type="number"]');
+const convert = document.querySelector('button');
 const results = document.querySelector('.results p');
 
 //Functions
@@ -155,6 +156,7 @@ cryptoSelect.addEventListener('click', e => {
 //Select currency
 currencySelect.addEventListener('click', e => {
   currencyValue = e.target.value;
+  input.focus();
 });
 
 //Show results
@@ -163,4 +165,10 @@ input.addEventListener('keyup', e => {
     numberValue = parseInt(input.value);
     dataLoad();
   }
+});
+
+convert.addEventListener('click', e => {
+  e.preventDefault();
+  numberValue = parseInt(input.value);
+  dataLoad();
 });

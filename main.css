@@ -135,7 +135,7 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* button {
+button {
   width: 100%;
   height: 30px;
   color: ghostwhite;
@@ -148,8 +148,7 @@ input[type='number']::-webkit-outer-spin-button {
   border: none;
   outline: none;
   cursor: pointer;
-  display: none;
-} */
+}
 
 .results {
   width: 100%;
