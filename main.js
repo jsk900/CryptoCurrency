@@ -158,7 +158,9 @@ currencySelect.addEventListener('click', e => {
 });
 
 //Show results
-input.addEventListener('mouseleave', () => {
-  numberValue = parseInt(input.value);
-  dataLoad();
+input.addEventListener('keyup', e => {
+  if (e.which === 13) {
+    numberValue = parseInt(input.value);
+    dataLoad();
+  }
 });
