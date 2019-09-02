@@ -25,7 +25,7 @@ body {
 header {
   width: 100%;
   height: 5%;
-  margin: 40px 80px;
+  margin: 20px 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,14 +40,14 @@ header h1 {
 /* Main section */
 section {
   width: 60%;
-  height: 80%;
+  height: 90%;
 }
 
 /* Crypto-Currency list start ............................................*/
 #crypto {
   width: 100%;
-  height: 30px;
-  padding: 3px 0;
+  height: 50px;
+  padding: 3px 30px;
   margin-bottom: 20px;
   color: #3b1a09;
   background-color: #f09f25;
@@ -58,17 +58,14 @@ section {
 }
 
 #crypto option:nth-child(odd) {
-  font-size: 0.9em;
   background-color: #f1c98e;
 }
 
 #crypto option:nth-child(even) {
-  font-size: 0.9em;
   background-color: #dfb372;
 }
 
 #crypto option:first-child {
-  font-size: 1em;
   background-color: #3b1a09;
   color: ghostwhite;
   font-weight: bold;
@@ -78,8 +75,8 @@ section {
 /* Currency list start .................................................. */
 #currency {
   width: 100%;
-  height: 30px;
-  padding: 3px 0;
+  height: 50px;
+  padding: 3px 30px;
   margin-bottom: 20px;
   color: #3b1a09;
   background-color: #f09f25;
@@ -90,17 +87,14 @@ section {
 }
 
 #currency option:nth-child(odd) {
-  font-size: 0.9em;
   background-color: #f1c98e;
 }
 
 #currency option:nth-child(even) {
-  font-size: 0.9em;
   background-color: #dfb372;
 }
 
 #currency option:first-child {
-  font-size: 1em;
   background-color: #3b1a09;
   color: ghostwhite;
   font-weight: bold;
@@ -127,6 +121,7 @@ input {
   border: none;
   outline: none;
   text-align: center;
+  box-shadow: 1px 1px 2px #0f0f0f;
 }
 
 /* Remove input number arrows */
@@ -149,6 +144,7 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  box-shadow: 1px 1px 2px #3b1a09;
 }
 
 .results1 {
@@ -156,6 +152,7 @@ button {
   height: 50px;
   background-color: #f09f25;
   margin-top: 20px;
+  box-shadow: 1px 1px 2px #3b1a09;
 }
 
 .results1 p {
@@ -171,6 +168,7 @@ button {
   height: 50px;
   background-color: #704504;
   margin-top: 20px;
+  box-shadow: 1px 1px 2px #0f0f0f;
 }
 
 .results2 p {

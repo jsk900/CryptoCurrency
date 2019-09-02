@@ -61,7 +61,7 @@ const currencyUnicodes = [
 //Url for crypto currency converter
 const url = 'https://api.cryptonator.com/api/ticker/';
 
-let cryptoValue, currencyValue, numberValue, paddingPosCrypto, paddingPosCurr;
+let cryptoValue, currencyValue, numberValue;
 
 //DOM Elements
 const cryptoSelect = document.querySelector('#crypto');
@@ -79,9 +79,6 @@ const start = () => {
     option.value = type;
     option.innerHTML = cryptoNames[index];
     cryptoSelect.appendChild(option);
-    paddingPosCrypto =
-      cryptoSelect.scrollWidth / 2 - cryptoSelect[0].innerHTML.length * 2;
-    cryptoSelect.style = `padding-left: ${paddingPosCrypto}px;`;
   });
 
   currTypes.map((type, index) => {
@@ -89,10 +86,6 @@ const start = () => {
     option.value = type;
     option.innerHTML = currNames[index];
     currencySelect.appendChild(option);
-
-    paddingPosCurr =
-      currencySelect.scrollWidth / 2 - currencySelect[0].innerHTML.length * 2;
-    currencySelect.style = `padding-left: ${paddingPosCurr}px;`;
   });
 };
 
@@ -137,30 +130,27 @@ const errorHandler = error => {
 //Listeners
 //Expand list
 cryptoSelect.addEventListener('mouseenter', e => {
-  e.target.style = `margin-bottom: 175px; padding-left: ${paddingPosCrypto}px;`;
+  e.target.style = `margin-bottom: 179px;`;
 });
 
 //Collapse list
 cryptoSelect.addEventListener('mouseleave', e => {
-  cryptoSelect.style = `margin-bottom: 20px; padding-left: ${paddingPosCrypto}px`;
+  cryptoSelect.style = `margin-bottom: 20px;`;
 });
 
 //Expand list
 currencySelect.addEventListener('mouseenter', e => {
-  currencySelect.style = `margin-bottom: 140px; padding-left: ${paddingPosCurr}px`;
+  currencySelect.style = `margin-bottom: 132px;`;
 });
 
 //Collapse list
 currencySelect.addEventListener('mouseleave', e => {
-  currencySelect.style = `margin-bottom: 20px; padding-left: ${paddingPosCurr}px`;
+  currencySelect.style = `margin-bottom: 20px;`;
 });
 
 //Select crypto currency
 cryptoSelect.addEventListener('click', e => {
   cryptoValue = e.target.value;
-  console.log(e.target.value.length);
-  paddingPosCrypto = e.target.scrollWidth / 2 - e.target.value.length * 2;
-  e.target.style = `padding-left: ${paddingPosCrypto}px`;
   input.value = '';
   results1.innerHTML = '';
   results2.innerHTML = '';
@@ -169,8 +159,6 @@ cryptoSelect.addEventListener('click', e => {
 //Select currency
 currencySelect.addEventListener('click', e => {
   currencyValue = e.target.value;
-  paddingPosCurr = e.target.scrollWidth / 2 - e.target.value.length * 2;
-  e.target.style = `padding-left: ${paddingPosCurr}px`;
 });
 
 //Show results
